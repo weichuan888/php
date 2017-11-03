@@ -94,7 +94,6 @@ je rajoute un input pour definir le type et le nom que je souhaite obtenir dans 
 
 Ensuite je crée une balise php et j'integre la variable egale au post et j'encadre la variable age entre guillemets
 afin qu'il puisse lire le chiffre et applique les conditions. -->
-    <p>
       <form action="conditions.php" method="post">
         <p>Quel est votre âge ?
         <input type="text" name="age" /></p>
@@ -117,54 +116,6 @@ afin qu'il puisse lire le chiffre et applique les conditions. -->
       echo $saluer;
        ?>
     </p>
-
-<!-- 3. Affiche une salutation différente selon l'âge et le genre de l'utilisateur.
-Complète le formulaire de l'exercice précédent en ajoutant une deuxième question : "Homme ou Femme?" (champ de type Radio). Si le genre est féminin, adapte la réponse de l'âge correspondant au genre féminin.
-Par exemple, si l'âge est entre 12 et 18 ans et le genre féminin, affiche "Salut l'adolescente!" sinon affiche "Salut l'adolescent!".
-Idem pour les autres tranches d'âge.
-Astuce: Exploite le fait que l'on puisse mettre des conditions dans des conditions. -->
-    <p>
-      <form action="conditions.php" method="post">
-        <p>Quel est votre âge ?
-        <input type="text" name="age" /></p>
-        <p>Quel est votre genre ?
-        <input type="text" name="genre" /></p>
-        <p><input type="submit" value="OK"></p>
-      </form>
-      <?php
-      $age=$_POST["age"];
-      $genre=$_POST["femme"];
-      $genre=$_POST["homme"];
-      if ($age <12 && $genre==homme) {
-        $saluer= "Salut petit!";
-        else if ($age<12 && $genre==femme) {
-          $saluer= "Salut petite!"
-        }
-      }
-      if ($age>=12 && $age <18 && $genre==homme) {
-        $saluer= "Salut l'ado!";
-        else if ($age>=12 && $age <18 && $genre==femme){
-          $saluer= "salut l'adolescente!"
-        }
-      }
-    if ($age>=18 && $age<115 && $genre == homme) {
-          $saluer= "Salut l'adulte!";
-          else if ($age>=18 && $age<115 && $genre == femme) {
-            $saluer= "Salut la vieille"
-          }
-      }
-    if ($age>=115 && $genre ==homme) {
-          $saluer= "Wow! Toujours vivant?";
-          else if ($age>=115 && $genre ==femme){
-            $saluer = "Wow! A quand ta mort?"
-          }
-      }
-      echo $saluer;
-       ?>
-    </p>
-
-
-
 
 
 
