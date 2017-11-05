@@ -17,9 +17,9 @@ Astuce: Exploite le fait que l'on puisse mettre des conditions dans des conditio
       // extract($_POST); => reprend toutes les variables du name de input comme genre et age
       // il est utilisé comme un raccourci pour toutes ces variables.
 
-      if (isset($_POST["envoi"])) {
-        echo $_POST["genre"];
-      }
+      // if (isset($_POST["envoi"])) {
+      //   echo $_POST["genre"];
+      // }
       // Ce if permet de reprendre le genre qu'on peut cocher et de la renvoyer pour le bouton radio.
 
       if ($age <12) {
@@ -44,7 +44,8 @@ Astuce: Exploite le fait que l'on puisse mettre des conditions dans des conditio
           $saluer= "salut l'adolescente!";
       }
     }
-    if ($age>=18 && $age<115 && $genre =="homme") {
+    if ($age>=18 && $age<115)
+      if ($genre =="homme") {
           $saluer= "Salut l'adulte!";
           }
           else {
