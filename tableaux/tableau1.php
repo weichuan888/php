@@ -70,7 +70,7 @@
     $papa = [
       'prenom' => 'Quang',
       'age' => 70,
-      'aime_la_nourriture' => true,
+      'aime_la_nourriture' => 'true',
       'hobbies' => array("IT", "lire", "photos")
     ];
     $moi = [
@@ -107,28 +107,104 @@ de faire parler de toi dans les médias. Tu choisis donc de porter le nom de Die
 Comment mettre à jour ton tableau pour refléter ce changement de nom de famille? -->
   <h2>Manipulation des array!</h2>
     <?php
-
-
+    $papa = [
+      'nom_de_famille'=> 'Tran',
+      'prenom' => 'Quang',
+      'age' => 70,
+      'aime_la_nourriture' => 'true',
+      'hobbies' => array("IT", "lire", "photos")
+    ];
     $moi = [
+      'nom_de_famille' => 'Tran',
       'prenom' => 'Weichuan',
       'age' => 24,
       'aime_la_nourriture' => 'true',
-      'hobbies' => array("musique", "jeux de société", "gastronomie"),
+      'hobbies' => array("la musique", "les jeux de société", "la randonnée"),
+      'papa' => $papa
     ];
+    // $sousTableau = array_splice($moi ['nom_de_famille']0);
+    // print_r($sousTableau);
+    // $moi = ['nom_de_famille' => 'Dieudonné'];
+    // $sousTableau = array_splice($moi ['nom_de_famille']0);
+    // print_r($sousTableau);
+    // array_push($moi ['hobbies'], 'taxidermie'); autre maniere d'ajouter un element
+    $moi ['hobbies'][] = "taxidermie";
+    $moi ['prenom'] = 'Dieudonné';
+    // il suffit d'écrire le prenom par dessus...de la variable...
+    echo '<pre>';
     print_r ($moi);
-    echo count ($moi, COUNT_RECURSIVE);
+    echo '<pre>';
+
+    $result = count ($moi ['hobbies']);
+    echo ($result);
     echo '<br/>';
-    $papa = [
-      'prenom' => 'Quang',
-      'age' => 70,
-      'aime_la_nourriture' => true,
-      'hobbies' => array("IT", "lire", "photos")
+    $result2 = count($papa ['hobbies']);
+    echo ($result2);
+    echo '<br/>';
+    echo $result + $result2;
+    echo '<br/>';
+
+    $toi = [
+      'nom_de_famille' => "Ling",
+      'prenom' => "Mi",
+      'age' => 22,
+      "hobbies" => array("Le chant", "la poésie", "la randonnée"),
     ];
-    print_r ($papa);
+    print_r($toi);
+    $fusionTableau = array_merge_recursive ($moi, $toi);
+    print_r($fusionTableau);
 
-
+    $inter = array_intersect_assoc($moi, $toi);
+    print_r($inter);
 
      ?>
+
+ <!-- Créer un tableau à partir de deux tableaux (ou plus)
+
+Un jour, tu rencontres ton $ame_soeur.
+Décris-la sous forme d'un Tableau $toi .
+Quels seront le ou les hobbies que votre enfant aura?
+
+Il se trouve que tu as vu un documentaire à la télé
+dans lequel un spécialiste en génétique héréditaire, expliquait qu'il y a 2 possibilités:
+
+soit l'intersection (les hobby communs aux deux array),
+soit la fusion (tous les hobby de chaque array).
+ Devine le nom des 2 fonctions PHP correspondantes dans la documentation de PHP
+(indice: elles commencent toutes deux par array_)
+et teste leur syntaxe. Affiche le résultat de chacune via la fonction print_r().
+Voir ci dessus!-->
+
+<?php
+  $web_developpement = [
+    'frontend'
+    'backend'
+  ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ?>
 
 
 
