@@ -175,54 +175,36 @@ soit la fusion (tous les hobby de chaque array).
 et teste leur syntaxe. Affiche le résultat de chacune via la fonction print_r().
 Voir ci dessus!-->
 
-<?php
-  $web_developpement = [
-    'frontend'
-    'backend'
-  ]
+
+<!--
+Exercices : fin
+
+Note: Pour chacun de ces exercices, affiche le résultat via la fonction print_r() afin de vérifier que tu obtiens le bon résultat. (Et dans une balise html <pre> c'est encore mieux).
+
+    Crée un tableau$web_development contenant une clef "frontend" et une clef "backend". À chaque clef, associe un sous-tableau vide.
+    ensuite, ajoute une ligne en dessous qui ajoute à la bonne clef la technologie suivante: "xhtml".
+    ensuite, ajoute une ligne en dessous qui ajoute à la bonne clef la technologie suivante: "Ruby on Rails".
+    ensuite, ajoute une ligne en dessous qui ajoute à la bonne clef la technologie suivante: "CSS".
+    ensuite, ajoute une ligne en dessous qui ajoute à la bonne clef la technologie suivante: "Flash".
+    ensuite, ajoute une ligne en dessous qui ajoute à la bonne clef la technologie suivante: "Javascript".
+    ensuite, ajoute une ligne en dessous qui remplace la ligne contenant "xhtml" par "html".
+    ensuite, ajoute une ligne en dessous qui efface la ligne contenant "Flash". -->
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      <?php
+        $web_developpement = [
+          'frontend' => array(),
+          'backend' => array(),
+        ];
+          $web_developpement ['frontend'] [] = "xhtml";
+          $web_developpement ['backend'] [] = "Ruby on Rails";
+          $web_developpement ['frontend'] [] = "CSS";
+          $web_developpement ['backend'] [] = "Flash";
+          $web_developpement ['frontend'] [] = "Javascript";
+          $web_developpement ['frontend'] [0] = "html";
+          unset ($web_developpement ['backend'] [1]);
+          print_r($web_developpement);
+       ?>
   </body>
 </html>
