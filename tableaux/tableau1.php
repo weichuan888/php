@@ -86,6 +86,67 @@
     echo $moi['hobbies'][1];
     echo '<br/>';
     echo $moi ['papa']['hobbies'][1];
+    echo '<br/>';
+    echo '<br/>';
+    echo '<br/>';
      ?>
+
+     <!-- Manipulation des array : Compter
+
+Tu veux savoir combien de hobbies a ton père.
+Trouve la fonction PHP qui permette de compter le nombre d'éléments d'un tableau.
+Compte tes propres hobbies
+Additionne les deux et affiche le résultat
+Ajouter
+Un ami t'a fait découvrir les joies de la taxidermie.
+Trouve la bonne syntaxe pour ajouter le hobby "Taxidermie" à ton tableau de "hobbies".
+Remplacer
+Tu te disputes avec ton père et tu décides de changer de nom de famille.
+Ta contestation n'a d'autre objet que de faire chier le système et
+de faire parler de toi dans les médias. Tu choisis donc de porter le nom de Dieudonné.
+Comment mettre à jour ton tableau pour refléter ce changement de nom de famille? -->
+  <h2>Manipulation des array!</h2>
+    <?php
+
+
+    $moi = [
+      'prenom' => 'Weichuan',
+      'age' => 24,
+      'aime_la_nourriture' => 'true',
+      'hobbies' => array("musique", "jeux de société", "gastronomie"),
+    ];
+    print_r ($moi);
+    echo count ($moi, COUNT_RECURSIVE);
+    echo '<br/>';
+    $papa = [
+      'prenom' => 'Quang',
+      'age' => 70,
+      'aime_la_nourriture' => true,
+      'hobbies' => array("IT", "lire", "photos")
+    ];
+    print_r ($papa);
+
+
+
+     ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </body>
 </html>
