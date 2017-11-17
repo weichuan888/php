@@ -277,6 +277,7 @@
         $phrase= "ARRÊTE DE CRIER JE N'ENTENDS PLUS RIEN!!!";
         $phrase= strtolower($phrase);
         echo $phrase;
+        echo "<hr>";
       ?>
 <!-- Afin qu'il te laisse tranquille, crée une fonction volume_dun_cone,
 qui va calculer le volume du cône en fonction du rayon et de la hauteur.
@@ -285,19 +286,61 @@ on veut juste qu'elle nous renvoie le volume qu'on cherche.
 Voici un schéma, pour bien t'embrouiller
 (Ben oui, en réalité, les informations utiles à cette mission sont dans le code ci-dessus...) -->
       <?php
-      funcion volume_dun_cone(); {
-      $formule = 
 
-
-
-
-
-
-
-
-
-
+        function VolumeCone($rayon = '3', $hauteur = '4') {
+        $volume= $rayon * $rayon * 3.14 * $hauteur * (1/3); // calcul du volume
+           return $volume; // indique la valeur à renvoyer, ici le volume
+      }
+      echo VolumeCone();
+      echo "<hr>";
        ?>
+<!-- Invente une fonction reverse_string( $stringToReverse)
+qui réécrit une chaine de caractères à l'envers. -->
+
+      <?php
+      echo strrev ("weichuan");
+      ?>
+<!-- En Wallonie, les mouvements de jeunesse ont une chanson populaire intitulée
+"Buvons un coup ma serpette est perdue".
+Utilise la fonction str_replace avec
+ $substitutions = array( E, I, O, U, OU, É, È, OI, UI, OUI, AN, IN, ON, UN, OIN);
+ pour transformer automatiquement les voyelles du couplet selon chaque élément
+ de l'array et ainsi générer les paroles complètes de la chanson
+ (le couplet avec chaque diphtongue remplacée). -->
+
+      <?php
+      $phras= "Bavas a ca ma sarpata a parda, Ma la macha ma la macha Bavas a ca ma sarpata a parda
+Ma la macha a ravana.";
+      $substitution = [E, I, O, U, OU, É, È, OI, UI, OUI, AN, IN, ON, UN, OIN];
+        for ($i=0; $i < count($substitution) ; $i++) {
+          echo str_replace("a", $substitution[$i], $phras);
+          echo "<hr>";
+        }
+// on cree une variable contenant la phrase,
+// on crée un tableau contenant les lettres a changer
+// on crée une boucle pour que chaque lettre soit changer dans la phrase
+// count($substitution) cest comme le length, la taille du tableau
+// ensuite on utilise la fonction str_replace pour remplacer
+// la voyelle par la variable de $substitution[$i] dans la phras
+
+
+      echo count($substitution);
+       ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   </body>
 </html>

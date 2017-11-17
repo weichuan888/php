@@ -26,10 +26,10 @@ Complète le formulaire de l'exercice précédent en ajoutant une troisième que
          <?php
          extract($_POST);
 
-         if (isset($_POST["envoi"])) {
-           echo $_POST["genre"];
-           echo $_POST["reponse"];
-         }
+        //  if (isset($_POST["envoi"])) {
+        //    echo $_POST["genre"];
+        //    echo $_POST["reponse"];
+        //  }
 
 
          if ($age <12) {
